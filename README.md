@@ -31,7 +31,7 @@ O foco do projeto é **reforçar os conhecimentos em desenvolvimento web** com u
 
 ---
 
-## 📱 Contato
+## 📱 Estou no IG também
 
 Você pode me encontrar no Instagram:  
 [👉 @wagnermarcellus](https://instagram.com/wagnermarcellus)  
