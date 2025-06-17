@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Kanban</title>
+</head>
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+</style>
+<body>
+    <div class="bodyy">
+    <div class="divEsquerda">
+ <div class="Bem-vindo">
+        <h1>Welcome to your task manager</h1>
+         <p>Here you can manage your everyday task easily</p>
+         <br>
+         <br>
+         <form action="" style="display: flex; flex-direction: column; gap: 5px;" method="POST">
+            <input type="text" name="title" id="title" placeholder="Title">
+            <textarea name="description" id="description" cols="20" rows="3" placeholder="Description"></textarea>
+            <button type="submit"><i class='fa fa-plus-circle' style='font-size:15px'></i> Create <i class='fa fa-plus-circle' style='font-size:15px'></i></button>
+        </form>
+         <br>
+         <p>Click on the buttons to edit, delete or mark as done</p>
+    </div>
+    
+    
+    <main id="Kanban">
+        
+
+    </main>
+    </div>
+    <div class="divDireita">
+        <div class="histortCard">
+            <h2>Tasks History</h2>
+            <p>Here you can see the history of your tasks</p>
+            <br>
+            <div class="historico">
+                <div class="tarefaFeita">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    <button class="delete"><i class='fa fa-trash-restore' style="font-size:15px"></i> Restore</button>
+                </div>
+                <div class="tarefaFeita">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    <button class="delete"><i class='fa fa-trash-restore' style="font-size:15px"></i> Restore</button>
+                </div>
+                <div class="tarefaFeita">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    <button class="delete"><i class='fa fa-trash-restore' style="font-size:15px"></i> Restore</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+   <footer style="display: block; text-align: center;">
+        <p style=" position: relative;">
+            <hr>
+            Todos os direitos reservados | Desenvolvido por Wagner Marcellus &copy; 2025 <br>
+            <a href="https://instagram.com/wagnermarcellus" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>   |  
+            <a href="https://github.com/wagnermarcellus" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

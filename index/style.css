@@ -1,0 +1,119 @@
+body {
+    /*background: radial-gradient(circle at 30% 35%, #b4f306 10%, #19beb0 100%);*/
+    background-image: linear-gradient(80deg, #b4f306, #09ffeb, #db0dd1 , #ffee00);
+    background-size: 200% 200%;
+    animation: bgMove 7s ease-in-out infinite alternate;
+}
+.bodyy {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    padding: 100px;
+    height: auto;
+}
+@keyframes bgMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.divEsquerda {
+    width: 50%;
+    background-color: rgb(21, 139, 100);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.divDireita {
+    width: 50%;
+    background-color: rgba(140, 223, 165, 0.548);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 15px;
+}
+.divDireita:hover {
+    background-color: rgba(255, 103, 103, 0.363);
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.1);
+}
+.Bem-vindo{
+    text-align: center;
+    background-color: rgb(156, 209, 169);
+    padding-bottom: 25px;
+    padding-top: 10px;
+    padding: 25px;
+    border-top-left-radius:15px ;
+    border-top-right-radius: 15px;
+    margin: 10px 0px 0px 0px;
+
+}
+
+
+#Kanban {
+    background-color: rgb(21, 139, 100);
+    border-top-left-radius:15px ;
+    border-top-right-radius: 15px;
+    padding: 15px;
+    margin: -10px 0px 0px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+#kanban:hover {
+    background-color: rgba(255, 0, 0, 0.479) !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.tarefa{
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    padding: 1px;
+    border-radius: 5px;
+    
+}
+/**/
+.tarefaFeita{
+    background-color: rgba(255, 255, 255, 0.25);
+    display: grid;
+    padding: 1px;
+    border-radius: 5px;
+}
+.historico{
+     border-top-left-radius:15px ;
+    border-top-right-radius: 15px;
+    padding: 15px;
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+/***/
+button{
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 13px;
+}
+button:hover {
+  background-color: aqua;
+  
+}
+
+.edit{
+    background-color: rgb(61, 116, 116);
+    color: white;
+    
+}
+.done{
+    background-color: greenyellow;
+    color: rgb(0, 0, 0);
+}
+.delete{
+    background-color: red;
+    color: white;
+}
