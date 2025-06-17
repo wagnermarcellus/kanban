@@ -10,7 +10,7 @@ Este é um projeto Kanban criado durante o curso de Análise e Desenvolvimento d
 
 ❌ Excluir tarefas
 
-📦 Organização das tarefas em colunas: A Fazer, Em Andamento e Concluído
+📦 Organização das tarefas feitas.
 
 💾 Armazenamento local (localStorage) das informações
 
