@@ -1,7 +1,7 @@
 # kanban
 Projeto Kanban
-📌 Projeto Kanban - SENAI ADS 💻🧠
-Este é um projeto Kanban criado durante o curso de Análise e Desenvolvimento de Sistemas (ADS) no SENAI 🏫🇧🇷. O objetivo principal é praticar e aplicar conceitos de front-end na criação de uma interface funcional e organizada para o gerenciamento de tarefas. ✅👨‍💻
+📌 Projeto Kanban - SENAI 💻🧠
+Este é um projeto Kanban criado durante o curso de Desenvolvimento de Sistemas (DS) no SENAI 🏫🇧🇷. O objetivo principal é praticar e aplicar conceitos de front-end na criação de uma interface funcional e organizada para o gerenciamento de tarefas. ✅👨‍💻
 
 🧰 Funcionalidades:
 ✅ Criar tarefas
