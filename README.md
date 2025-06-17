@@ -1,25 +1,41 @@
-# kanban
-Projeto Kanban
-📌 Projeto Kanban - SENAI 💻🧠
-Este é um projeto Kanban criado durante o curso de Desenvolvimento de Sistemas (DS) no SENAI 🏫🇧🇷. O objetivo principal é praticar e aplicar conceitos de front-end na criação de uma interface funcional e organizada para o gerenciamento de tarefas. ✅👨‍💻
+# 📌 Projeto Kanban - SENAI DS 💻🧠
 
-🧰 Funcionalidades:
-✅ Criar tarefas
+Este é um projeto Kanban criado durante o curso de **Desenvolvimento de Sistemas (DS)** no **SENAI** 🏫🇧🇷.  
+📚
 
-📝 Editar tarefas
+O projeto tem como objetivo **praticar e aplicar conceitos de front-end** na criação de uma interface funcional e organizada para o gerenciamento de tarefas. ✅👨‍💻
 
-❌ Excluir tarefas
+---
 
-📦 Organização das tarefas feitas.
+## 🧰 Funcionalidades
 
-💾 Armazenamento local (localStorage) das informações
+- ✅ Criar tarefas  
+- 📝 Editar tarefas  
+- ❌ Excluir tarefas  
+- 📦 Organização das tarefas feitas
+- 💾 Armazenamento local (localStorage) das informações
 
-🛠️ Tecnologias usadas:
-🌐 HTML
+---
 
-🎨 CSS
+## 🛠️ Tecnologias utilizadas
 
-⚙️ JavaScript
+- 🌐 HTML  
+- 🎨 CSS  
+- ⚙️ JavaScript
 
-🎯 Objetivo:
-O foco do projeto é reforçar os conhecimentos em desenvolvimento web com uma aplicação prática, visual e útil no dia a dia de quem precisa organizar suas tarefas. 🧩🚀
+---
+
+## 🎯 Objetivo
+
+O foco do projeto é **reforçar os conhecimentos em desenvolvimento web** com uma aplicação prática, visual e útil no dia a dia de quem precisa organizar suas tarefas. 🧩🚀
+
+---
+
+## 📱 Contato
+
+Você pode me encontrar no Instagram:  
+[👉 @wagnermarcellus](https://instagram.com/wagnermarcellus)  
+
+---
+
+🛠️ Feito com dedicação e aprendizado durante o curso no SENAI. 💡📘
