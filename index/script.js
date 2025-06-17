@@ -1,34 +1,3 @@
-/**let listaDeAtividades = [
-    {  
-        id: 1,
-        nome: "Estudar JavaScript",
-        descricao: "Revisar conceitos básicos e avançados de JavaScript.",
-        stauts: "pendente"
-    },
-    {  
-        id: 2,
-        nome: "Praticar exercícios de programação",
-        descricao: "Resolver problemas de programação em plataformas online.",
-        stauts: "concluída"
-    },
-    {  
-        id: 3,
-        nome: "Ler um livro sobre desenvolvimento web",
-        descricao: "Ler o livro 'Aprenda JavaScript com exemplos'.",
-        stauts: "pendente"
-    }
-];
-function renderizarLista() {
-    const lista = document.getElementById("listaDeAtividades");
-    lista.innerHTML = ""; 
-
-    listaDeAtividades.forEach(atividade => {
-        const item = document.createElement("li");
-        item.textContent = `${atividade.nome} - ${atividade.descricao} (${atividade.stauts})`;
-        lista.appendChild(item);
-    });
-}
-**/
 
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('form').addEventListener('submit', function(e) {
@@ -55,11 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('Kanban').appendChild(tarefa);
 
         this.reset();
-        // ...existing code...
+        
 
-        this.reset();
-
-        // Adiciona eventos aos botões da tarefa
+        //Aqui é para adicionar eventos aos botões da tarefa
         tarefa.querySelector('.done').addEventListener('click', function() {
             // Move para o histórico
             tarefa.className = 'tarefaFeita';
@@ -118,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-// ...existing code...
        
     });
 });
