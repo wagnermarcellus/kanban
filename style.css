@@ -1,9 +1,3 @@
-body {
-    /*background: radial-gradient(circle at 30% 35%, #b4f306 10%, #19beb0 100%);*/
-    background-image: linear-gradient(80deg, #b4f306, #09ffeb, #db0dd1 , #ffee00);
-    background-size: 200% 200%;
-    animation: bgMove 7s ease-in-out infinite alternate;
-}
 .bodyy {
     display: flex;
     gap: 30px;
@@ -11,7 +5,8 @@ body {
     padding: 100px;
     height: auto;
 }
-@keyframes bgMove {
+
+/* @keyframes bgMove {
     0% {
         background-position: 0% 50%;
     }
@@ -21,11 +16,11 @@ body {
     100% {
         background-position: 0% 50%;
     }
-}
+} */
 
 .divEsquerda {
     width: 50%;
-    background-color: rgb(21, 139, 100);
+    background-color: rgba(4, 157, 204, 0.377);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     padding: 10px;
@@ -34,32 +29,36 @@ body {
 
 .divDireita {
     width: 50%;
-    background-color: rgba(140, 223, 165, 0.548);
+    background-color: rgba(66, 122, 120, 0.377);
     backdrop-filter: blur(5px);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
     border-radius: 15px;
 }
+
 .divDireita:hover {
-    background-color: rgba(255, 103, 103, 0.363);
+    background-color: rgba(122, 92, 92, 0.322);
     box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.1);
+    color: white;
 }
-.Bem-vindo{
+
+.Bem-vindo {
     text-align: center;
-    background-color: rgb(156, 209, 169);
+    background-color: rgba(41, 114, 116, 0.39);
+    backdrop-filter: blur(5px);
+    color: white;
     padding-bottom: 25px;
     padding-top: 10px;
     padding: 25px;
-    border-top-left-radius:15px ;
-    border-top-right-radius: 15px;
-    margin: 10px 0px 0px 0px;
+    border-radius: 15px;
+    margin: 10px 0px 13px 0px;
 
 }
 
 
 #Kanban {
-    background-color: rgb(21, 139, 100);
-    border-top-left-radius:15px ;
+    background-color: rgba(4, 157, 204, 0);
+    border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     padding: 15px;
     margin: -10px 0px 0px 0px;
@@ -68,32 +67,40 @@ body {
     gap: 10px;
     overflow-x: auto;
     overflow: auto;
-    
+
 }
+
 #kanban:hover {
     background-color: rgba(255, 0, 0, 0.479) !important;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.tarefa{
-    background-color: rgb(255, 255, 255);
+.tarefa {
+    background-color: rgba(99, 91, 91, 0.342);
+    color: #ffffff;
+    text-transform: capitalize;
+    backdrop-filter: blur(4px);
     display: grid;
     padding: 5px;
     border-radius: 5px;
     overflow-y: auto;
     word-break: break-word;
-    padding: 3px 0px 5px; /* aumenta o espaço interno */
-    min-height: 200px;  /* deixa a tarefa mais alta */
-    
+    padding: 3px 0px 5px;
+    /* aumenta o espaço interno */
+    min-height: 200px;
+    /* deixa a tarefa mais alta */
+
 }
+
 .tarefa:hover {
-    background-color: rgba(1, 235, 215, 0.8);
+    background-color: rgba(1, 235, 216, 0.178);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
+
 /**/
-.tarefaFeita{
-     background: rgba(255, 255, 255, 0.35);
+.tarefaFeita {
+    background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(4px);
     display: grid;
     padding: 1px;
@@ -102,76 +109,99 @@ body {
     word-break: break-word;
     opacity: 0.7;
     filter: grayscale(0.3);
-    color: #555;
+    color: #ffffff;
     text-decoration: line-through;
+    text-transform: capitalize;
     transition: background 0.3s, opacity 0.3s;
 }
-.historico{
-     border-top-left-radius:15px ;
+
+.historico {
+    border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     padding: 15px;
-   
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
 }
+
 /***/
-button{
+button {
     padding: 10px;
     cursor: pointer;
     border-radius: 13px;
     margin: 2px;
 }
+
 button:hover {
-  background-color: aqua;
-  
+    background-color: rgb(24, 89, 211);
+    color: white;
+
 }
 
-.edit{
+.edit {
     background-color: rgb(61, 116, 116);
     color: white;
-    
+
 }
-.done{
+
+.done {
     background-color: greenyellow;
     color: rgb(65, 65, 65);
 }
-.delete{
+
+.delete {
     background-color: red;
     color: white;
 }
-.restore{
+
+.restore {
     background-color: rgb(251, 255, 0);
-    color: rgb(0, 0, 0);
+    color: rgb(40, 27, 112);
     padding-left: 25px;
     padding-right: 25px;
 }
-input{
+
+::selection {
+    background: rgba(0, 250, 167, 0.651);
+    color: #ff0000;
+}
+
+::placeholder {
+    color: #7d9c8b;
+    opacity: 1.9;
+}
+
+input {
     padding: 15px;
     border-radius: 5px;
     font-size: 20px;
 }
-textarea{
+
+textarea {
     padding: 15px;
     border-radius: 5px;
     font-size: 20px;
 }
+
 footer {
-    background: rgba(255, 255, 255, 0.575);
+    background: rgba(255, 255, 255, 0.301);
     backdrop-filter: blur(6px);
     border-radius: 12px 12px 0 0;
-    box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.10);
     margin-top: 30px;
     padding: 20px 0 10px 0;
-    color: #222;
+    color: #ffffff;
     font-weight: 500;
     transition: background 0.3s;
 }
+
 footer a {
-    color: #032c69;
+    color: #ffbb00;
     text-decoration: none;
     transition: color 0.2s;
 }
+
 footer a:hover {
     color: #19beb0;
 }
@@ -192,7 +222,7 @@ footer a:hover {
     padding: 18px;
     max-width: 180px;
     max-height: 180px;
-    box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.10);
     display: block;
     margin: 0 auto;
 }
@@ -205,6 +235,7 @@ footer a:hover {
         padding: 10px 2vw;
         gap: 10px;
     }
+
     .divEsquerda,
     .divDireita {
         width: 98%;
@@ -214,22 +245,26 @@ footer a:hover {
         min-width: unset;
         max-width: 600px;
     }
+
     .Bem-vindo {
         padding: 10px 2vw;
         font-size: 1rem;
     }
+
     #Kanban,
     .historico {
         grid-template-columns: 1fr;
         padding: 8px;
         gap: 8px;
     }
+
     .tarefa,
     .tarefaFeita {
         min-height: 100px;
         padding: 8px 4px;
         font-size: 1rem;
     }
+
     button {
         font-size: 1rem;
         padding: 8px 10px;
@@ -237,6 +272,7 @@ footer a:hover {
         width: 100%;
         box-sizing: border-box;
     }
+
     input,
     textarea {
         font-size: 1rem;
@@ -244,6 +280,7 @@ footer a:hover {
         width: 100%;
         box-sizing: border-box;
     }
+
     footer {
         font-size: 0.95rem;
         padding: 10px 2px;
@@ -254,43 +291,51 @@ footer a:hover {
         left: 0;
         right: 0;
     }
+
     footer p {
         text-align: center;
         margin: 0 auto;
     }
 }
+
 /* *********************Popup*************************** */
 .popup-overlay {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.2);
-  backdrop-filter: blur(6px);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .popup-content {
-  background: rgba(255,255,255,0.85);
-  border-radius: 12px;
-  padding: 30px 20px;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
-  min-width: 280px;
-  max-width: 90vw;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.18);
+    min-width: 280px;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
+
 .popup-content input,
 .popup-content textarea {
-  width: 100%;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1em;
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
 }
+
 .popup-buttons {
-  display: flex;
-  gap: 10px;
-  justify-content: flex-end;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
 }

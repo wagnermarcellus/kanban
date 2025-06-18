@@ -7,6 +7,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
+    
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Kanban</title>
@@ -19,6 +20,7 @@
     }
 </style>
 <body>
+<canvas id="bg-canvas" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;"></canvas>
     <div class="bodyy">
     <div class="divEsquerda">
  <div class="Bem-vindo">
@@ -44,7 +46,7 @@
     </main>
     </div>
     <div class="divDireita">
-        <div class="histortCard">
+        <div style="color: aliceblue;" class="histortCard">
             <h2>Tasks History</h2>
             <p>Here you can see the history of your tasks</p>
             <br>
