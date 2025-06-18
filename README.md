@@ -49,7 +49,7 @@ O foco do projeto é **reforçar os conhecimentos em desenvolvimento web** com u
 ---
 ---
 
-## 🚀✨ Veja o Projeto Online! ✨🚀
+## 🚀✨Veja o Projeto Online!✨🚀
 
 👀 Quer conferir como ficou o **Projeto Kanban** funcionando na prática?  
 👉 Clique no link abaixo para abrir em uma nova aba e explorar!
