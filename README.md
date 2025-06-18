@@ -12,8 +12,9 @@ O projeto tem como objetivo **praticar e aplicar conceitos de front-end** na cri
 - ✅ Criar tarefas  
 - 📝 Editar tarefas  
 - ❌ Excluir tarefas  
-- 📦 Organização das tarefas feitas
-- 💾 Armazenamento local (localStorage) das informações
+- 📦 Organização das tarefas feitas  
+- 💾 Armazenamento local (localStorage) das informações  
+- 📱 Responsivo (funciona bem em dispositivos móveis e desktop)
 
 ---
 
@@ -28,6 +29,20 @@ O projeto tem como objetivo **praticar e aplicar conceitos de front-end** na cri
 ## 🎯 Objetivo
 
 O foco do projeto é **reforçar os conhecimentos em desenvolvimento web** com uma aplicação prática, visual e útil no dia a dia de quem precisa organizar suas tarefas. 🧩🚀
+
+---
+
+## 📸 Capturas de Tela
+
+### 💻 Versão Desktop
+<img src="docs/screenshots/img-d1.png" width="800px" alt="Desktop 1">
+<img src="docs/screenshots/img-d2.png" width="800px" alt="Desktop 2">
+<img src="docs/screenshots/img-d3.png" width="800px" alt="Desktop 3">
+
+### 📱 Versão Mobile
+<img src="docs/screenshots/img-m1.png" width="300px" alt="Mobile 1">
+<img src="docs/screenshots/img-m2.png" width="300px" alt="Mobile 2">
+<img src="docs/screenshots/img-m3.png" width="300px" alt="Mobile 3">
 
 ---
 
