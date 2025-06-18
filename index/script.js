@@ -130,7 +130,26 @@ tarefa.querySelector('.edit').addEventListener('click', function() {
     addEditPopupEvent(tarefa);
 });
 
+function toggleHistoryImage() {
+    const historico = document.querySelector('.historico');
+    const imgContainer = document.querySelector('.img-completed-container');
+    if (!imgContainer) return;
+    if (historico && historico.children.length > 0) {
+        imgContainer.style.display = 'none';
+    } else {
+        imgContainer.style.display = 'flex';
+    }
+}
+
+// Chame ao carregar a página
+toggleHistoryImage();
+
+// Chame sempre que adicionar ou remover tarefas do histórico
+const observer = new MutationObserver(toggleHistoryImage);
+observer.observe(document.querySelector('.historico'), { childList: true });
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    });
+    
+});
 
 });
+/******************************************************************/

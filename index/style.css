@@ -6,7 +6,7 @@ body {
 }
 .bodyy {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     text-align: center;
     padding: 100px;
     height: auto;
@@ -175,6 +175,29 @@ footer a {
 footer a:hover {
     color: #19beb0;
 }
+
+.img-completed-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+}
+
+.img-completed {
+    backdrop-filter: blur(8px);
+    border-radius: 18px;
+    padding: 18px;
+    max-width: 180px;
+    max-height: 180px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+    display: block;
+    margin: 0 auto;
+}
+
+
 /* ********************Mobile**************************** */
 @media (max-width: 900px) {
     .bodyy {
