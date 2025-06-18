@@ -40,9 +40,11 @@ O foco do projeto é **reforçar os conhecimentos em desenvolvimento web** com u
 <img src="docs/screenshots/img-d3.png" width="800px" alt="Desktop 3">
 
 ### 📱 Versão Mobile
-<img src="docs/screenshots/img-m1.png" width="300px" alt="Mobile 1">
-<img src="docs/screenshots/img-m2.png" width="300px" alt="Mobile 2">
-<img src="docs/screenshots/img-m3.png" width="300px" alt="Mobile 3">
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="docs/screenshots/img-m1.png" width="300px" alt="Mobile 1">
+  <img src="docs/screenshots/img-m2.png" width="300px" alt="Mobile 2">
+  <img src="docs/screenshots/img-m3.png" width="300px" alt="Mobile 3">
+</div>
 
 ---
 
