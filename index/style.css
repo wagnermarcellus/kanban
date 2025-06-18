@@ -22,6 +22,7 @@ body {
         background-position: 0% 50%;
     }
 }
+
 .divEsquerda {
     width: 50%;
     background-color: rgb(21, 139, 100);
@@ -65,24 +66,45 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
+    overflow-x: auto;
+    overflow: auto;
+    
 }
 #kanban:hover {
     background-color: rgba(255, 0, 0, 0.479) !important;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 .tarefa{
     background-color: rgb(255, 255, 255);
     display: grid;
-    padding: 1px;
+    padding: 5px;
     border-radius: 5px;
+    overflow-y: auto;
+    word-break: break-word;
+    padding: 3px 0px 5px; /* aumenta o espaço interno */
+    min-height: 200px;  /* deixa a tarefa mais alta */
     
+}
+.tarefa:hover {
+    background-color: rgba(1, 235, 215, 0.8);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 /**/
 .tarefaFeita{
-    background-color: rgba(255, 255, 255, 0.25);
+     background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(4px);
     display: grid;
     padding: 1px;
     border-radius: 5px;
+    overflow-y: auto;
+    word-break: break-word;
+    opacity: 0.7;
+    filter: grayscale(0.3);
+    color: #555;
+    text-decoration: line-through;
+    transition: background 0.3s, opacity 0.3s;
 }
 .historico{
      border-top-left-radius:15px ;
@@ -95,9 +117,10 @@ body {
 }
 /***/
 button{
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
     border-radius: 13px;
+    margin: 2px;
 }
 button:hover {
   background-color: aqua;
@@ -111,9 +134,128 @@ button:hover {
 }
 .done{
     background-color: greenyellow;
-    color: rgb(0, 0, 0);
+    color: rgb(65, 65, 65);
 }
 .delete{
     background-color: red;
     color: white;
+}
+.restore{
+    background-color: rgb(251, 255, 0);
+    color: rgb(0, 0, 0);
+    padding-left: 25px;
+    padding-right: 25px;
+}
+input{
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+textarea{
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+footer {
+    background: rgba(255, 255, 255, 0.575);
+    backdrop-filter: blur(6px);
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+    margin-top: 30px;
+    padding: 20px 0 10px 0;
+    color: #222;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+footer a {
+    color: #032c69;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+footer a:hover {
+    color: #19beb0;
+}
+/* ********************Mobile**************************** */
+@media (max-width: 900px) {
+    .bodyy {
+        flex-direction: column;
+        padding: 15px 5px;
+        gap: 10px;
+    }
+    .divEsquerda,
+    .divDireita {
+        width: 100%;
+        margin: 0;
+        padding: 8px;
+    }
+    .Bem-vindo {
+        padding: 15px 5px;
+        font-size: 1rem;
+    }
+    #Kanban,
+    .historico {
+        grid-template-columns: 1fr;
+        padding: 8px;
+        gap: 8px;
+    }
+    .tarefa,
+    .tarefaFeita {
+        min-height: 120px;
+        padding: 10px 5px;
+        font-size: 1rem;
+    }
+    button {
+        font-size: 1rem;
+        padding: 8px 10px;
+        margin: 2px 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    input,
+    textarea {
+        font-size: 1rem;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    footer {
+        font-size: 0.9rem;
+        padding: 10px 2px;
+        
+    }
+}
+/* *********************Popup*************************** */
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.2);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-content {
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+  min-width: 280px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.popup-content input,
+.popup-content textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+.popup-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
 }

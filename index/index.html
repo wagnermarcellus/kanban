@@ -27,12 +27,13 @@
          <br>
          <br>
          <form action="" style="display: flex; flex-direction: column; gap: 5px;" method="POST">
-            <input type="text" name="title" id="title" placeholder="Title">
+            <input type="text" name="title" id="title"  placeholder="Title">
             <textarea name="description" id="description" cols="20" rows="3" placeholder="Description"></textarea>
             <button type="submit"><i class='fa fa-plus-circle' style='font-size:15px'></i> Create <i class='fa fa-plus-circle' style='font-size:15px'></i></button>
         </form>
          <br>
          <p>Click on the buttons to edit, delete or mark as done</p>
+        
     </div>
     
     
@@ -48,21 +49,9 @@
             <p>Here you can see the history of your tasks</p>
             <br>
             <div class="historico">
-                <div class="tarefaFeita">
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    <button class="delete"><i class='fa fa-trash-restore' style="font-size:15px"></i> Restore</button>
-                </div>
-                <div class="tarefaFeita">
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    <button class="delete"><i class='fa fa-trash-restore' style="font-size:15px"></i> Restore</button>
-                </div>
-                <div class="tarefaFeita">
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    <button class="delete"><i class='fa fa-trash-restore' style="font-size:15px"></i> Restore</button>
-                </div>
+            
+
+               <!-- <img class="img-completed" src="/index/img.png" alt="image of completed tasks" style=""> -->
             </div>
 
         </div>
@@ -70,7 +59,7 @@
     </div>
    <footer style="display: block; text-align: center;">
         <p style=" position: relative;">
-            <hr>
+            
             Todos os direitos reservados | Desenvolvido por Wagner Marcellus &copy; 2025 <br>
             <a href="https://instagram.com/wagnermarcellus" target="_blank">
                 <i class="fab fa-instagram"></i> Instagram
@@ -80,5 +69,16 @@
             </a>
         </p>
     </footer>
+    <div id="editPopup" class="popup-overlay" style="display:none;">
+  <div class="popup-content">
+    <h2>Edit Task</h2>
+    <input type="text" id="popupTitle" placeholder="Title">
+    <textarea id="popupDesc" rows="4" placeholder="Description"></textarea>
+    <div class="popup-buttons">
+      <button id="saveEdit"><i class="fa fa-save"></i> Save</button>
+      <button id="cancelEdit"><i class="fa fa-times"></i> Cancel</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>

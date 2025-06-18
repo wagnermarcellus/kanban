@@ -15,14 +15,15 @@ document.addEventListener('DOMContentLoaded', function() {
             <p>${description}</p>
             <br>
             <div>
-                <button class="edit"><i class="fa fa-pencil" style="font-size:15px"></i> Edit</button>
+                <button class="edit"><i class="fa fa-edit" style="font-size:15px"></i> Edit</button>
+                <br>
                 <button class="done"><i class='fa fa-chevron-circle-down' style="font-size:15px"></i> Done</button>
                 <button class="delete"><i class="fa fa-trash" style="font-size:15px"></i> Delete</button>
             </div>
         `;
 
         document.getElementById('Kanban').appendChild(tarefa);
-
+        addEditPopupEvent(tarefa) 
         this.reset();
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -43,7 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p>${description}</p>
                     <br>
                     <div>
-                        <button class="edit"><i class="fa fa-pencil" style="font-size:15px"></i> Edit</button>
+                        <button class="edit"><i class="fa fa-edit" style="font-size:15px"></i> Edit</button>
+                        <br>
                         <button class="done"><i class='fa fa-chevron-circle-down' style="font-size:15px"></i> Done</button>
                         <button class="delete"><i class="fa fa-trash" style="font-size:15px"></i> Delete</button>
                     </div>
@@ -71,11 +73,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p>${description}</p>
                         <br>
                         <div>
-                            <button class="edit"><i class="fa fa-pencil" style="font-size:15px"></i> Edit</button>
+                            <button class="edit"><i class="fa fa-edit" style="font-size:15px"></i> Edit</button>
+                            <br>
                             <button class="done"><i class='fa fa-chevron-circle-down' style="font-size:15px"></i> Done</button>
                             <button class="delete"><i class="fa fa-trash" style="font-size:15px"></i> Delete</button>
                         </div>
                     `;
+                    
                     document.getElementById('Kanban').appendChild(tarefa);
                     addTaskEvents(tarefa, title, description);
                 });
@@ -83,8 +87,50 @@ document.addEventListener('DOMContentLoaded', function() {
             tarefa.querySelector('.delete').addEventListener('click', function() {
                 tarefa.remove();
             });
+           addEditPopupEvent(tarefa)  
         }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
        
+function addEditPopupEvent(tarefa) {
+    tarefa.querySelector('.edit').addEventListener('click', function() {
+        const popup = document.getElementById('editPopup');
+        const popupTitle = document.getElementById('popupTitle');
+        const popupDesc = document.getElementById('popupDesc');
+        const saveBtn = document.getElementById('saveEdit');
+        const cancelBtn = document.getElementById('cancelEdit');
+
+        // Preenche os campos com os valores atuais
+        popupTitle.value = tarefa.querySelector('h2 strong').innerText;
+        popupDesc.value = tarefa.querySelector('p').innerText;
+
+        popup.style.display = 'flex';
+
+        // Remove eventos antigos para evitar múltiplos triggers
+        saveBtn.onclick = null;
+        cancelBtn.onclick = null;
+
+        // Salvar edição
+        saveBtn.onclick = function() {
+            const newTitle = popupTitle.value.trim();
+            const newDesc = popupDesc.value.trim();
+            tarefa.querySelector('h2 strong').innerText = newTitle;
+            tarefa.querySelector('p').innerText = newDesc;
+            popup.style.display = 'none';
+        };
+
+        // Cancelar edição
+        cancelBtn.onclick = function() {
+            popup.style.display = 'none';
+        };
     });
+}
+tarefa.querySelector('.edit').addEventListener('click', function() {
+    addEditPopupEvent(tarefa);
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    });
+
 });
