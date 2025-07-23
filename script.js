@@ -1,4 +1,119 @@
+// Funções auxiliares para localStorage
+function saveTasksToLocalStorage() {
+    const tarefas = [];
+    document.querySelectorAll('#Kanban .tarefa, .tarefaFeita').forEach(tarefa => {
+        tarefas.push({
+            title: tarefa.querySelector('h2 strong').innerText,
+            description: tarefa.querySelector('p').innerText,
+            done: tarefa.classList.contains('tarefaFeita')
+        });
+    });
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));
+}
 
+function loadTasksFromLocalStorage() {
+    const saved = localStorage.getItem('tarefas');
+    if (!saved) return;
+    const tarefas = JSON.parse(saved);
+    tarefas.forEach(({ title, description, done }) => {
+        const tarefa = createTaskElement(title, description, done);
+        if (done) {
+            document.querySelector('.historico').appendChild(tarefa);
+        } else {
+            document.getElementById('Kanban').appendChild(tarefa);
+        }
+    });
+}
+
+function createTaskElement(title, description, done = false) {
+    const tarefa = document.createElement('div');
+    tarefa.className = done ? 'tarefaFeita' : 'tarefa';
+    tarefa.innerHTML = `
+        <h2><strong>${title}</strong></h2>
+        <p>${description}</p>
+        <br>
+        <div>
+            ${done ? `<button class="restore"><i class='fa fa-trash-restore' style="font-size:15px"></i> Restore</button>` : `
+            <button class="edit"><i class="fa fa-edit" style="font-size:15px"></i> Edit</button>
+            <br>
+            <button class="done"><i class='fa fa-chevron-circle-down' style="font-size:15px"></i> Done</button>
+            <button class="delete"><i class="fa fa-trash" style="font-size:15px"></i> Delete</button>`}
+        </div>
+    `;
+
+    if (done) {
+        tarefa.querySelector('.restore').addEventListener('click', () => {
+            const restored = createTaskElement(title, description, false);
+            document.getElementById('Kanban').appendChild(restored);
+            tarefa.remove();
+            saveTasksToLocalStorage();
+        });
+    } else {
+        tarefa.querySelector('.done').addEventListener('click', () => {
+            const finished = createTaskElement(title, description, true);
+            document.querySelector('.historico').appendChild(finished);
+            tarefa.remove();
+            saveTasksToLocalStorage();
+        });
+        tarefa.querySelector('.delete').addEventListener('click', () => {
+            tarefa.remove();
+            saveTasksToLocalStorage();
+        });
+        tarefa.querySelector('.edit').addEventListener('click', () => addEditPopupEvent(tarefa));
+    }
+
+    return tarefa;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const title = document.getElementById('title').value.trim();
+        const description = document.getElementById('description').value.trim();
+        if (!title) return;
+
+        const tarefa = createTaskElement(title, description, false);
+        document.getElementById('Kanban').appendChild(tarefa);
+        this.reset();
+        saveTasksToLocalStorage();
+    });
+
+    loadTasksFromLocalStorage();
+
+    // Exibe ou esconde imagem de histórico vazio
+    const observer = new MutationObserver(() => {
+        const historico = document.querySelector('.historico');
+        const imgContainer = document.querySelector('.img-completed-container');
+        if (!imgContainer) return;
+        imgContainer.style.display = historico.children.length > 0 ? 'none' : 'flex';
+    });
+    observer.observe(document.querySelector('.historico'), { childList: true });
+});
+
+function addEditPopupEvent(tarefa) {
+    const popup = document.getElementById('editPopup');
+    const popupTitle = document.getElementById('popupTitle');
+    const popupDesc = document.getElementById('popupDesc');
+    const saveBtn = document.getElementById('saveEdit');
+    const cancelBtn = document.getElementById('cancelEdit');
+
+    popupTitle.value = tarefa.querySelector('h2 strong').innerText;
+    popupDesc.value = tarefa.querySelector('p').innerText;
+    popup.style.display = 'flex';
+
+    saveBtn.onclick = () => {
+        const newTitle = popupTitle.value.trim();
+        const newDesc = popupDesc.value.trim();
+        tarefa.querySelector('h2 strong').innerText = newTitle;
+        tarefa.querySelector('p').innerText = newDesc;
+        popup.style.display = 'none';
+        saveTasksToLocalStorage();
+    };
+
+    cancelBtn.onclick = () => popup.style.display = 'none';
+}
+
+/////////////////////////////////////////////////////
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('form').addEventListener('submit', function (e) {
         e.preventDefault();
@@ -152,6 +267,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
 /******************************************************************/
 // --- Background Animation with Floating Task Icons ---
 window.addEventListener('DOMContentLoaded', function () {
