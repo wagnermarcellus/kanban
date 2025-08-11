@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('form').addEventListener('submit', function (e) {
         e.preventDefault();
         const title = document.getElementById('title').value.trim();
-        const description = document.getElementById('description').value.trim();
+        const description = document.getElementById('description').value;
         if (!title) return;
 
         const tarefa = createTaskElement(title, description, false);
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
 
         const title = document.getElementById('title').value.trim();
-        const description = document.getElementById('description').value.trim();
+        const description = document.getElementById('description').value;
 
         if (!title) return;
 
